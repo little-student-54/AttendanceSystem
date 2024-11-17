@@ -79,13 +79,14 @@ namespace AttendanceSystem
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+           
             try
             {
                 // Get the connection string from the configuration
                 string connectionString = ConfigurationManager.ConnectionStrings["AttendanceDB"].ConnectionString;
 
-                // SQL query to fetch all attendance records
-                string query = "SELECT * FROM Attendance";
+                // SQL query to fetch attendance records based on status
+                string query = "SELECT * FROM Attendance WHERE Status = @Status";
 
                 // Create a DataTable to hold the data
                 DataTable dataTable = new DataTable();
@@ -95,6 +96,12 @@ namespace AttendanceSystem
                     conn.Open();
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
+                        // Get the selected status from a ComboBox or similar control
+                        string selectedStatus = cmbStatus.SelectedItem.ToString(); // Assuming a ComboBox named cmbStatus
+
+                        // Add the parameter to the SQL query
+                        cmd.Parameters.AddWithValue("@Status", selectedStatus);
+
                         // Use SqlDataAdapter to fill the DataTable
                         SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                         adapter.Fill(dataTable);
@@ -102,12 +109,13 @@ namespace AttendanceSystem
                 }
 
                 // Bind the DataTable to the DataGridView
-                dgvAttendance.DataSource = dataTable; 
+                dgvAttendance.DataSource = dataTable;
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private void dtpTime_ValueChanged(object sender, EventArgs e)

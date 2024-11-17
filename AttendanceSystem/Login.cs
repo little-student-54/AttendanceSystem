@@ -17,12 +17,14 @@ namespace AttendanceSystem
         public Login()
         {
             InitializeComponent();
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
 
-                string connectionString = ConfigurationManager.ConnectionStrings["AttendanceDB"].ConnectionString; using
+            string connectionString = ConfigurationManager.ConnectionStrings["AttendanceDB"].ConnectionString; using
     (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open(); string query = "SELECT COUNT(*) FROM Users WHERE Username = @username AND Password =@password";
@@ -30,9 +32,11 @@ namespace AttendanceSystem
                     {
                         cmd.Parameters.AddWithValue("@username", txtinput.Text);
                         cmd.Parameters.AddWithValue("@password", textpassword.Text);
-                        int count = (int)cmd.ExecuteScalar(); if (count > 0)
+                        int count = (int)cmd.ExecuteScalar();
+                    if (count > 0)
                         {
-                            MessageBox.Show("Login Successful!");
+                       
+                        MessageBox.Show("Login Successful!");
                             AttendanceForm attendanceForm = new AttendanceForm();
 
                             this.Hide();
