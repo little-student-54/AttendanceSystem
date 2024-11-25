@@ -81,6 +81,12 @@
     <Compile Include="AttendanceForm.Designer.cs">
       <DependentUpon>AttendanceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AttendanceManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceManage.Designer.cs">
+      <DependentUpon>AttendanceManage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AttendanceForm.resx">
       <DependentUpon>AttendanceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceManage.resx">
+      <DependentUpon>AttendanceManage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

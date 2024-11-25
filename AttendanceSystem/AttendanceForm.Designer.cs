@@ -43,6 +43,7 @@
             this.dgvAttendance = new System.Windows.Forms.DataGridView();
             this.dtpTime = new System.Windows.Forms.DateTimePicker();
             this.exit = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAttendance)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,7 +91,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(25, 265);
+            this.label5.Location = new System.Drawing.Point(25, 230);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 25);
             this.label5.TabIndex = 4;
@@ -100,7 +101,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(150, 22);
+            this.label6.Location = new System.Drawing.Point(211, 22);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(498, 37);
             this.label6.TabIndex = 5;
@@ -136,7 +137,7 @@
             this.cmbStatus.Items.AddRange(new object[] {
             "Present",
             "Absent"});
-            this.cmbStatus.Location = new System.Drawing.Point(145, 265);
+            this.cmbStatus.Location = new System.Drawing.Point(143, 236);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(121, 21);
             this.cmbStatus.TabIndex = 9;
@@ -156,11 +157,11 @@
             // 
             // btnViewAttendance
             // 
-            this.btnViewAttendance.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnViewAttendance.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btnViewAttendance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewAttendance.Location = new System.Drawing.Point(200, 342);
             this.btnViewAttendance.Name = "btnViewAttendance";
-            this.btnViewAttendance.Size = new System.Drawing.Size(165, 34);
+            this.btnViewAttendance.Size = new System.Drawing.Size(165, 45);
             this.btnViewAttendance.TabIndex = 11;
             this.btnViewAttendance.Text = "View Attendance";
             this.btnViewAttendance.UseVisualStyleBackColor = false;
@@ -170,9 +171,9 @@
             // 
             this.dgvAttendance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAttendance.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dgvAttendance.Location = new System.Drawing.Point(386, 265);
+            this.dgvAttendance.Location = new System.Drawing.Point(387, 230);
             this.dgvAttendance.Name = "dgvAttendance";
-            this.dgvAttendance.Size = new System.Drawing.Size(447, 215);
+            this.dgvAttendance.Size = new System.Drawing.Size(512, 259);
             this.dgvAttendance.TabIndex = 12;
             // 
             // dtpTime
@@ -190,7 +191,7 @@
             this.exit.BackColor = System.Drawing.Color.Red;
             this.exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exit.ForeColor = System.Drawing.Color.Black;
-            this.exit.Location = new System.Drawing.Point(128, 414);
+            this.exit.Location = new System.Drawing.Point(29, 445);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(101, 44);
             this.exit.TabIndex = 14;
@@ -198,12 +199,25 @@
             this.exit.UseVisualStyleBackColor = false;
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(200, 445);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(165, 35);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Manage Attendance";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // AttendanceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(892, 492);
+            this.ClientSize = new System.Drawing.Size(943, 528);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.exit);
             this.Controls.Add(this.dtpTime);
             this.Controls.Add(this.dgvAttendance);
@@ -244,5 +258,6 @@
         private System.Windows.Forms.DataGridView dgvAttendance;
         private System.Windows.Forms.DateTimePicker dtpTime;
         private System.Windows.Forms.Button exit;
+        private System.Windows.Forms.Button button1;
     }
 }

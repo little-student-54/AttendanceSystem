@@ -90,7 +90,7 @@
             this.submit.BackColor = System.Drawing.Color.Lime;
             this.submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submit.ForeColor = System.Drawing.Color.Blue;
-            this.submit.Location = new System.Drawing.Point(525, 355);
+            this.submit.Location = new System.Drawing.Point(454, 369);
             this.submit.Name = "submit";
             this.submit.Size = new System.Drawing.Size(108, 33);
             this.submit.TabIndex = 5;
@@ -103,7 +103,7 @@
             this.exit.BackColor = System.Drawing.Color.Red;
             this.exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exit.ForeColor = System.Drawing.Color.Blue;
-            this.exit.Location = new System.Drawing.Point(182, 355);
+            this.exit.Location = new System.Drawing.Point(640, 392);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(114, 33);
             this.exit.TabIndex = 6;
